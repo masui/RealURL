@@ -61,9 +61,17 @@ crypt = (str,data) ->
   # seeddataのMD5の32バイト値の一部を取り出して数値化し、
   # その値にもとづいて文字置換を行なう
   #
+  # hash = data
+
   hash = data
   unless /^[a-fA-F0-9]{32}$/.test hash
     hash = MD5_hexhash utf2bytestr(data)
+
+  if /^[a-f0-9]{32}$/.test str
+    charset = [ 'abcdef0123456789' ]
+  if /^[A-F0-9]{32}$/.test str
+    charset = [ 'ABCDEF0123456789' ]
+
   res = ''
   [0...str.length].forEach (i) ->
     j = i % 8

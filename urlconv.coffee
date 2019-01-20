@@ -31,5 +31,14 @@ $.ajax
           else if match = /^(.*\/)(\w+)$/.exec url
             url = match[1] + crypt(match[2],item.secret)
           location.href = url + '#forwarded_by_urlconv'
+    403: () ->
+      chrome.storage.sync.get ["secret"], (item) ->
+        url = location.href
+        unless /forwarded_by_urlconv/.exec url
+          if match = /^(.*\/)(\w+)\.([^\/]*)$/.exec url
+            url = match[1] + crypt(match[2],item.secret) + '.' + match[3]
+          else if match = /^(.*\/)(\w+)$/.exec url
+            url = match[1] + crypt(match[2],item.secret)
+          location.href = url + '#forwarded_by_urlconv'
 
 
