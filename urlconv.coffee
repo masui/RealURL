@@ -19,9 +19,6 @@
 
 # $ ->
 
-#chrome.storage.sync.get ["secret"], (item) =>
-#  alert item.secret
-
 $.ajax
   type: 'GET'
   statusCode:
@@ -34,6 +31,5 @@ $.ajax
           else if match = /^(.*\/)(\w+)$/.exec url
             url = match[1] + crypt(match[2],item.secret)
           location.href = url + '#forwarded_by_urlconv'
-
 
 
