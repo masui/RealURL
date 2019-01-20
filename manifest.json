@@ -1,0 +1,25 @@
+{
+    "name": "URL Converter",
+    "short_name": "URLConv",
+    "version": "0.0.1",
+    "manifest_version": 2,
+    "description": "秘密のURLに変換",
+
+    "permissions": [
+	"http://*/"
+    ],
+    
+    "icons": {
+	"48": "icons/episopass-48.png",
+	"96": "icons/episopass-96.png"
+    },
+
+    "content_scripts": [
+	{
+	    "matches": ["*://*/*"],
+	    "js": ["jquery-2.1.4.min.js", "urlconv.js"],
+	    "run_at": "document_idle"
+	}
+    ]
+}
+
