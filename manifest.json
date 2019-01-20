@@ -6,9 +6,10 @@
     "description": "秘密のURLに変換",
 
     "permissions": [
-	"http://*/"
+	"http://*/",
+	"storage"
     ],
-    
+
     "icons": {
 	"48": "icons/episopass-48.png",
 	"96": "icons/episopass-96.png"
@@ -17,9 +18,11 @@
     "content_scripts": [
 	{
 	    "matches": ["*://*/*"],
-	    "js": ["jquery-2.1.4.min.js", "urlconv.js"],
+	    "js": ["jquery-2.1.4.min.js","md5.js", "crypt.js", "urlconv.js", "setting.js"],
 	    "run_at": "document_idle"
 	}
-    ]
+    ],
+
+    "options_page": "setting.html"
 }
 

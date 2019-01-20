@@ -14,15 +14,26 @@
 #     if href.match /asahi.com/
 #       location.href = 'http://example.com'
 
+# alert localStorage['abcde']
+# localStorage['abcde'] = 'abcde'
+
 # $ ->
+
+#chrome.storage.sync.get ["secret"], (item) =>
+#  alert item.secret
+
 $.ajax
-  url: document.url
   type: 'GET'
   statusCode:
-    404: () -> 
-      location.href = 'https://gyazo.com/cb556cf419add01268e01b88905663b0.jpg'
+    404: () ->
+      chrome.storage.sync.get ["secret"], (item) ->
+        url = location.href
+        unless /forwarded_by_urlconv/.exec url
+          if match = /^(.*\/)(\w+)\.([^\/]*)$/.exec url
+            url = match[1] + crypt(match[2],item.secret) + '.' + match[3]
+          else if match = /^(.*\/)(\w+)$/.exec url
+            url = match[1] + crypt(match[2],item.secret)
+          location.href = url + '#forwarded_by_urlconv'
 
-# if location.href && location.href.match /facebook.com/i
-#   location.href = 'https://gyazo.com/cb556cf419add01268e01b88905663b0.jpg'
 
 
