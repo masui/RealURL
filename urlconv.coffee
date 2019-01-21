@@ -28,7 +28,7 @@ $.ajax
         newurl = url
         unless /no_forward/.exec url
           if match = /forwarded_from_url_(.*)$/.exec url
-            location.href = decodeURIComponent(match[1]) + '#no_forward'
+            # location.href = decodeURIComponent(match[1]) + '#no_forward'
           else
             if match = /^(.*\/)[0-9a-f]\/[0-9a-f]\/([0-9a-f]{32})(\.\w+)?$/.exec url
               newhash = crypt(match[2],item.secret)
@@ -38,14 +38,14 @@ $.ajax
               newurl = match[1] + crypt(match[2],item.secret) + '.' + match[3]
             else if match = /^(.*\/)(\w+)$/.exec url
               newurl = match[1] + crypt(match[2],item.secret)
-            location.href = newurl + '#forwarded_from_url_' + encodeURIComponent(url)
+            location.href = newurl + '#forwarded_from_url_' # + encodeURIComponent(url)
     403: () ->
       chrome.storage.sync.get ["secret"], (item) ->
         url = location.href
         newurl = url
         unless /no_forward/.exec url
           if match = /forwarded_from_url_(.*)$/.exec url
-            location.href = decodeURIComponent(match[1]) + '#no_forward'
+            # location.href = decodeURIComponent(match[1]) + '#no_forward'
           else
             if match = /^(.*\/)[0-9a-f]\/[0-9a-f]\/([0-9a-f]{32})(\.\w+)?$/.exec url
               newhash = crypt(match[2],item.secret)
@@ -55,7 +55,7 @@ $.ajax
               newurl = match[1] + crypt(match[2],item.secret) + '.' + match[3]
             else if match = /^(.*\/)(\w+)$/.exec url
               newurl = match[1] + crypt(match[2],item.secret)
-            location.href = newurl + '#forwarded_from_url_' + encodeURIComponent(url)
+            location.href = newurl + '#forwarded_from_url_' # + encodeURIComponent(url)
 
 #      chrome.storage.sync.get ["secret"], (item) ->
 #        url = location.href
