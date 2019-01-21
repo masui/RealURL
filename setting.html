@@ -2,7 +2,7 @@
 <html lang="ja">
   <head>
     <style type="text/css">
-    input { background-color:#ddd; }
+    input { background-color:#eee; }
     </style>
     <meta charset="utf-8">
     <script src="jquery-2.1.4.min.js"></script>
@@ -10,7 +10,7 @@
     <script src="crypt.js"></script>
     <script src="setting.js"></script>
   </head>
-  <body style="background-color:#bbb;">
+  <body style="background-color:#ccc;">
     <h1 style="color:#222;"><i>Real-URL 拡張機能</i></h1>
 
     URLパタンにマッチするURLがNot Foundになったとき、パスワードで暗号化されたURLに飛びます
@@ -24,6 +24,8 @@
 	  <span>1:</span> <input type="text" id="address1" style="width:140px" placeholder="masui.org">
 	  <br>
 	  <span>2:</span> <input type="text" id="address2" style="width:140px">
+	  <br>
+	  <span>3:</span> <input type="text" id="address3" style="width:140px">
 	</div>
 	<div style="float:left;">
 	  パスワード
@@ -31,6 +33,8 @@
 	  <input type="password" id="password1" style="width:200;">
 	  <br>
 	  <input type="password" id="password2" width=50>
+	  <br>
+	  <input type="password" id="password3" width=50>
 	</div>
 	<br clear="all">
 	<p></p>
@@ -41,7 +45,7 @@
     変換結果は以下でチェックできます
 
     <blockquote>
-      <input type="text" style="width:300px" id="checkurl"> <input type="submit" value="変換" id="check">
+      <input type="text" style="width:300px" id="checkurl" placeholder="http://example.com/abcdef"> <input type="submit" value="変換" id="check">
     </blockquote>
     
   </body>

@@ -1,10 +1,12 @@
 
 $(function(){
-    chrome.storage.sync.get(["password1", "password2", "address1", "address2"], (item) => {
+    chrome.storage.sync.get(["password1", "password2", "password3", "address1", "address2", "address3"], (item) => {
 	$('#password1').val(item.password1);
 	$('#password2').val(item.password2);
+	$('#password3').val(item.password3);
 	$('#address1').val(item.address1);
 	$('#address2').val(item.address2);
+	$('#address3').val(item.address3);
     });
 
     $('#register').on('click', () => {
@@ -12,8 +14,10 @@ $(function(){
 	    {
 		"password1": $('#password1').val(),
 		"password2": $('#password2').val(),
+		"password3": $('#password3').val(),
 		"address1": $('#address1').val(),
-		"address2": $('#address2').val()
+		"address2": $('#address2').val(),
+		"address3": $('#address3').val()
 	    }
 	);
     });
