@@ -80,4 +80,15 @@ crypt = (str,data) ->
     res += crypt_char(str[i],n+i)
   res
 
-# console.log exports.crypt("abc1234","defkkk123")
+crypturl = (url,password) ->
+  newurl = url
+  if match = /^(.*\/)[0-9a-f]\/[0-9a-f]\/([0-9a-f]{32})(\.\w+)?$/.exec url
+    newhash = crypt match[2], password
+    match2 = /^(.)(.)/.exec newhash
+    newurl = match[1] + match2[1] + '/' + match2[2] + '/' + newhash + match[3]
+  else if match = /^(.*\/)(\w+)\.([^\/]*)$/.exec url
+    newurl = match[1] + crypt(match[2],password) + '.' + match[3]
+  else if match = /^(.*\/)(\w+)$/.exec url
+    newurl = match[1] + crypt(match[2],password)
+  newurl
+
