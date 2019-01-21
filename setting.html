@@ -1,22 +1,48 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
+    <style type="text/css">
+    input { background-color:#ddd; }
+    </style>
     <meta charset="utf-8">
     <script src="jquery-2.1.4.min.js"></script>
     <script src="md5.js"<>/script>
     <script src="crypt.js"></script>
     <script src="setting.js"></script>
   </head>
-  <body>
-    <h1>URL文字列変換</h1>
+  <body style="background-color:#aaa;">
+    <h1 style="color:#222;"><i>Real-URL 拡張機能</i></h1>
 
-    URLがNot Foundのとき、以下のパスワードで暗号化されたURLに飛びます
+    URLパタンにマッチするURLがNot Foundになったとき、パスワードで暗号化されたURLに飛びます
     <p></p>
 
-    <form>
-      <input type="text" id="secret">
-      <input type="submit" value="登録" id="submit">
-    </form>
+    <blockquote>
 
+	<div style="float:left;">
+	  <span style="visibility:hidden;">1: </span>URLパタン
+	  <br>
+	  <span>1:</span> <input type="text" id="address1" style="width:140px" placeholder="masui.org">
+	  <br>
+	  <span>2:</span> <input type="text" id="address2" style="width:140px">
+	</div>
+	<div style="float:left;">
+	  パスワード
+	  <br>
+	  <input type="password" id="password1" style="width:200;">
+	  <br>
+	  <input type="password" id="password2" width=50>
+	</div>
+	<br clear="all">
+	<p></p>
+	<input type="submit" value="登録" id="register">
+
+    </blockquote>
+
+    変換結果は以下でチェックできます
+
+    <blockquote>
+      <input type="text" style="width:300px"> <input type="submit" value="変換" id="check">
+    </blockquote>
+    
   </body>
 </html>
