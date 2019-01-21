@@ -18,7 +18,7 @@
     "content_scripts": [
 	{
 	    "matches": ["*://*/*"],
-	    "js": ["jquery-2.1.4.min.js","md5.js", "crypt.js", "urlconv.js", "setting.js"],
+	    "js": ["jquery-2.1.4.min.js","md5.js", "crypt.js", "realurl.js", "setting.js"],
 	    "run_at": "document_idle"
 	}
     ],
