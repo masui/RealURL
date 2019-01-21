@@ -2,10 +2,11 @@
 $(function(){
     chrome.storage.sync.get(["secret"], (item) => $('#secret').val(item.secret))
 
-    $('#submit').on('click', ()=> {
+    $('#register').on('click', ()=> {
 	chrome.storage.sync.set(
 	    {
-		"secret": $('#secret').val()
+		"password1": $('#password1').val(),
+		"password2": $('#password2').val()
 	    }
 	);
     })
