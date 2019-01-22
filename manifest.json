@@ -1,18 +1,19 @@
 {
     "name": "Real-URL",
     "short_name": "RealURL",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "manifest_version": 2,
     "description": "秘密のURLに変換",
 
     "permissions": [
 	"http://*/",
-	"storage"
+	"storage",
+	"activeTab"
     ],
 
     "icons": {
-	"48": "icons/episopass-48.png",
-	"96": "icons/episopass-96.png"
+	"48": "icons/realurl-48.png",
+	"96": "icons/realurl-96.png"
     },
 
     "content_scripts": [

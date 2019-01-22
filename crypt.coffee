@@ -91,4 +91,3 @@ crypturl = (url,password) ->
   else if match = /^(.*\/)(\w+)$/.exec url
     newurl = match[1] + crypt(match[2],password)
   newurl
-
