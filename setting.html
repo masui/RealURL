@@ -2,10 +2,13 @@
 <html lang="ja">
   <head>
     <style type="text/css">
+      body { background-color:#ccc; }
       input { background-color:#eee; }
       th { text-align:left; }
-      .password { width:400px; }
+      h1 { color:#222; font-style:italic;}
+      .password { width:200px; }
       .text { width: 150px; }
+      #checkurl { width: 400px; }
     </style>
     <meta charset="utf-8">
     <script src="jquery-2.1.4.min.js"></script>
@@ -13,8 +16,8 @@
     <script src="crypt.js"></script>
     <script src="setting.js"></script>
   </head>
-  <body style="background-color:#ccc;">
-    <h1 style="color:#222;"><i>Real-URL 拡張機能</i></h1>
+  <body>
+    <h1>Real-URL 拡張機能</h1>
 
     URLパタンにマッチするURLがNot Foundになったとき、パスワードで暗号化されたURLに飛びます
     <p></p>
@@ -22,7 +25,7 @@
     <blockquote>
       <table>
 	<tr>
-	  <th></th><th style="width:100px">URLパタン</th><th style="width:400px">パスワード</th>
+	  <th></th><th>URLパタン</th><th>パスワード</th>
 	</tr>
 	<tr>
 	  <td>1. </td>
@@ -47,7 +50,7 @@
     変換結果は以下でチェックできます
 
     <blockquote>
-      <input type="text" style="width:300px" id="checkurl" placeholder="http://example.com/abcdef"> <input type="submit" value="変換" id="check">
+      <input type="text" id="checkurl" placeholder="http://example.com/abcdef"> <input type="submit" value="変換" id="check">
     </blockquote>
     
   </body>
