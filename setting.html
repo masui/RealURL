@@ -2,7 +2,10 @@
 <html lang="ja">
   <head>
     <style type="text/css">
-    input { background-color:#eee; }
+      input { background-color:#eee; }
+      th { text-align:left; }
+      .password { width:400px; }
+      .text { width: 150px; }
     </style>
     <meta charset="utf-8">
     <script src="jquery-2.1.4.min.js"></script>
@@ -17,29 +20,28 @@
     <p></p>
 
     <blockquote>
-
-	<div style="float:left;">
-	  <span style="visibility:hidden;">1: </span>URLパタン
-	  <br>
-	  <span>1:</span> <input type="text" id="address1" style="width:140px" placeholder="masui.org">
-	  <br>
-	  <span>2:</span> <input type="text" id="address2" style="width:140px">
-	  <br>
-	  <span>3:</span> <input type="text" id="address3" style="width:140px">
-	</div>
-	<div style="float:left;">
-	  パスワード
-	  <br>
-	  <input type="password" id="password1" style="width:200;">
-	  <br>
-	  <input type="password" id="password2" width=50>
-	  <br>
-	  <input type="password" id="password3" width=50>
-	</div>
-	<br clear="all">
-	<p></p>
-	<input type="submit" value="登録" id="register">
-
+      <table>
+	<tr>
+	  <th></th><th style="width:100px">URLパタン</th><th style="width:400px">パスワード</th>
+	</tr>
+	<tr>
+	  <td>1. </td>
+          <td><input class="text" type="text" id="address1" placeholder="masui.org"></td>
+	  <td><input class="password" type="password" id="password1"></td>
+	</tr>
+	<tr>
+	  <td>2. </td>
+	  <td><input class="text" type="text" id="address2"></td>
+	  <td><input class="password" type="password" id="password2"></td>
+	</tr>
+	<tr>
+	  <td>3. </td>
+	  <td><input class="text" type="text" id="address3"></td>
+	  <td><input class="password" type="password" id="password3"></td>
+	</tr>
+      </table>
+      <p></p>
+      <input type="submit" value="登録" id="register">
     </blockquote>
 
     変換結果は以下でチェックできます
