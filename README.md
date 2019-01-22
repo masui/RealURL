@@ -1,20 +1,6 @@
-<h1>RealURL - 本当のURLを隠す</h1>
+<h1>RealURL - ページが存在しないとき別URLを試す</h1>
 
-公開したくないファイルをWebに置きたいときはアクセス制限をかけるのが普通だと思うが、
-<b>一見アクセス制限は無いのに他人にはファイルが見えないようにする</b>
-と良い場合があるかもしれない。
-
-<p></p>
-たとえば、存在を秘密にしておきたい
-<a href="https://gyazo.com/1dea76dbcd6de95d76d2545e4b834e91">Gyazoデータ</a>があるとき、
-そのURLを使うかわりに
-<a href="https://gyazo.com/1bd45748e3d96c4eb2ec79c565b3070a">https://gyazo.com/1bd45748e3d96c4eb2ec79c565b3070a</a>
-のようなURLを利用する。
-このURLのデータは存在しないが、
-RealURL拡張機能を利用すると
-<b>データが存在しないときにURLを変換する</b>
-ようになっているので、
-拡張機能でパスワードを登録してあれば存在するGyazoデータにアクセスすることができる。
+詳細は<a href="https://Scrapbox.io/RealURL">こちら</a>
 
 
 
