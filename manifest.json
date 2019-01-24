@@ -6,7 +6,6 @@
     "description": "秘密のURLに変換",
 
     "permissions": [
-	"http://*/",
 	"storage",
 	"activeTab"
     ],
