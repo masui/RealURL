@@ -1,6 +1,7 @@
 js:
-	coffee -b -c realurl.coffee
-	coffee -b -c crypt.coffee
+	npm run build
+#	coffee -b -c realurl.coffee
+#	coffee -b -c crypt.coffee
 
 #
 # Chromeエクステンション公開用のzipを作る

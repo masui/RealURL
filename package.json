@@ -4,7 +4,8 @@
   "description": "Convert URL",
   "main": "realurl.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "build": "coffee -b -c realurl.coffee && coffee -b -c crypt.coffee"
   },
   "repository": {
     "type": "git",
