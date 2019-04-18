@@ -1,5 +1,17 @@
 # $ ->
 
+# backgroundFunction = () ->
+#   # alert "バックグラウンドの関数を実行!"
+#   alert location.href
+#   $.ajax
+#     type: 'GET'
+#     statusCode:
+#       404: () -> hop()
+#       403: () -> hop()
+#   
+# bgWindow = chrome.extension.getBackgroundPage()
+# console.log bgWindow.backgroundFunction()
+
 hop = () ->
   chrome.storage.sync.get ["password1","password2","password3","address1","address2","address3"], (item) ->
     url = location.href
