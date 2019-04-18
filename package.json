@@ -1,0 +1,22 @@
+{
+  "name": "realurl",
+  "version": "1.0.0",
+  "description": "Convert URL",
+  "main": "realurl.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/masui/RealURL.git"
+  },
+  "author": "Toshiyuki Masui",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/masui/RealURL/issues"
+  },
+  "homepage": "https://github.com/masui/RealURL#readme",
+  "dependencies": {
+    "coffee-script": "^1.12.7"
+  }
+}
