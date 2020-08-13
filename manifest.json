@@ -1,7 +1,7 @@
 {
     "name": "Real-URL",
     "short_name": "RealURL",
-    "version": "0.0.10",
+    "version": "0.1.1",
     "manifest_version": 2,
     "description": "秘密のURLに変換",
 
@@ -12,12 +12,13 @@
 
     "icons": {
 	"48": "icons/realurl-48.png",
-	"96": "icons/realurl-96.png"
+	"96": "icons/realurl-96.png",
+	"128": "icons/realurl-96.png"
     },
 
     "content_scripts": [
 	{
-	    "matches": [ "http://*/*", "https://*/*" ],
+	    "matches": ["<all_urls>"],
 	    "js": ["jquery-2.1.4.min.js","md5.js", "crypt.js", "realurl.js", "setting.js"],
 	    "run_at": "document_idle"
 	}
