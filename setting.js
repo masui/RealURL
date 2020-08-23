@@ -23,9 +23,17 @@ $(function(){
     });
 
     $('#check').on('click', () => {
-        chrome.storage.sync.get(["password1"], (item) => {
-	    checkurl = $('#checkurl').val();
-	    $('#checkurl').val(crypturl(checkurl,item.password1));
+	chrome.storage.sync.get(["password1", "password2", "password3", "address1", "address2", "address3"], (item) => {
+	    url = $('#checkurl').val();
+	    newurl = url
+	    if (item.password1 !== "" && url.indexOf(item.address1) >= 0) {
+		newurl = crypturl(url, item.password1);
+	    } else if (item.password2 !== "" && url.indexOf(item.address2) >= 0) {
+		newurl = crypturl(url, item.password2);
+	    } else if (item.password3 !== "" && url.indexOf(item.address3) >= 0) {
+		newurl = crypturl(url, item.password3);
+	    }
+	    $('#checkurl').val(newurl)
 	});
     });
 });
