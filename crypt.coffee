@@ -8,7 +8,7 @@
 # md5 = if typeof require == 'undefined' then exports else require('./md5.js')
 
 #  文字種ごとに置換を行なうためのテーブル
-charset = [
+default_charset = [
   'abcdefghijklmnopqrstuvwxyz'
   'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
   '0123456789'
@@ -17,6 +17,7 @@ charset = [
   ' '
   "\"'/<>\\`"
 ]
+charset = []
 
 charkind = (c) ->
   ind = null
@@ -67,6 +68,7 @@ crypt = (str,data) ->
   unless /^[a-fA-F0-9]{32}$/.test hash
     hash = MD5_hexhash utf2bytestr(data)
 
+  charset = default_charset
   if /^[a-f0-9]{32}$/.test str
     charset = [ 'abcdef0123456789' ]
   if /^[a-f0-9]{24}$/.test str # Scrapboxへのアップロード
