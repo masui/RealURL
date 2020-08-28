@@ -69,6 +69,8 @@ crypt = (str,data) ->
 
   if /^[a-f0-9]{32}$/.test str
     charset = [ 'abcdef0123456789' ]
+  if /^[a-f0-9]{24}$/.test str # Scrapboxへのアップロード
+    charset = [ 'abcdef0123456789' ]
   if /^[A-F0-9]{32}$/.test str
     charset = [ 'ABCDEF0123456789' ]
 
