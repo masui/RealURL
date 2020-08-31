@@ -1,7 +1,7 @@
 {
     "name": "Real-URL",
     "short_name": "RealURL",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "manifest_version": 2,
     "description": "秘密のURLに変換",
 
@@ -13,7 +13,7 @@
     "icons": {
 	"48": "icons/realurl-48.png",
 	"96": "icons/realurl-96.png",
-	"128": "icons/realurl-96.png"
+	"128": "icons/realurl-128.png"
     },
 
     "content_scripts": [
