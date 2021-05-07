@@ -19,6 +19,6 @@
   "homepage": "https://github.com/masui/RealURL#readme",
   "dependencies": {
     "coffee-script": "^1.12.7",
-    "underscore": "^1.11.0"
+    "underscore": "^1.12.1"
   }
 }
